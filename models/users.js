@@ -4,7 +4,11 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     token: { type: String, unique: true },
-    role: String,
+    role: { 
+      type: String, 
+      enum: ['admin', 'organizer', 'participant'], 
+      default: 'participant' 
+    },
     preferences: Object,
     createdAt: Date,
   });
