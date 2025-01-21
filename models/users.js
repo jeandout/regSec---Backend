@@ -4,8 +4,9 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     token: { type: String, unique: true },
-    fonction: String,
-    settings: Object,
+    role: String,
+    preferences: Object,
+    createdAt: Date,
   });
 
 const User = mongoose.model('users', userSchema);

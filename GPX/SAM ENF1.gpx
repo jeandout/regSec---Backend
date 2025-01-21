@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gpx version="1.1" 
+creator="Memory-Map 6.4.3.1278 https://memory-map.com"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.topografix.com/GPX/1/1"
+ xmlns:xstyle="http://www.topografix.com/GPX/gpx_style/0/2"
+ xmlns:xgarmin="http://www.garmin.com/xmlschemas/GpxExtensions/v3"
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 https://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd">
+<trk>
+<name>SAM ENF1</name>
+<src>mmid:9A1CBBF17A68FC9A</src>
+<type>SAM:Track</type>
+<extensions> <xstyle:line>
+<xstyle:color>ff0080</xstyle:color>
+<xstyle:opacity>1.0</xstyle:opacity>
+<xstyle:width>4.0</xstyle:width>
+<xstyle:pattern>Dot</xstyle:pattern>
+</xstyle:line></extensions>
+<trkseg>
+<trkpt lat="48.4470952751" lon="1.4872721876"></trkpt>
+<trkpt lat="48.4465898023" lon="1.4864405326"></trkpt>
+<trkpt lat="48.4469214901" lon="1.4859909155"></trkpt>
+<trkpt lat="48.4469214901" lon="1.4859909155"></trkpt>
+<trkpt lat="48.4469193336" lon="1.4858217298"></trkpt>
+<trkpt lat="48.4469189023" lon="1.4857878926"></trkpt>
+<trkpt lat="48.4461185084" lon="1.4847616796"></trkpt>
+<trkpt lat="48.4461409946" lon="1.4847610299"></trkpt>
+<trkpt lat="48.4450253519" lon="1.4837101132"></trkpt>
+<trkpt lat="48.4449972499" lon="1.4832708969"></trkpt>
+<trkpt lat="48.4449968178" lon="1.4832370610"></trkpt>
+<trkpt lat="48.4455767069" lon="1.4828479546"></trkpt>
+<trkpt lat="48.4460592995" lon="1.4818862209"></trkpt>
+<trkpt lat="48.4464502083" lon="1.4807917277"></trkpt>
+<trkpt lat="48.4466365657" lon="1.4795339005"></trkpt>
+<trkpt lat="48.4471260091" lon="1.4773533267"></trkpt>
+<trkpt lat="48.4467627600" lon="1.4770930767"></trkpt>
+<trkpt lat="48.4467627600" lon="1.4770930767"></trkpt>
+</trkseg>
+</trk>
+</gpx>
