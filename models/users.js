@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
       default: 'participant' 
     },
     preferences: Object,
+    currentLocation: Object,
     createdAt: Date,
   });
 
