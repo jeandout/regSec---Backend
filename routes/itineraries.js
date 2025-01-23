@@ -1,9 +1,38 @@
 var express = require('express');
 var router = express.Router();
+const fs = require('fs');
+const path = require('path');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* GET itinéraries */
+router.get('/waypoints', async (req, res) => {
+  const geojsonPath = path.join(__dirname, "../GEOJSON/waypoints.geojson");
+
+  fs.readFile(geojsonPath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Erreur lors de la lecture du fichier GeoJSON:', err.message);
+      return res.status(500).json({
+        result: false,
+        message: 'Erreur lors de la lecture du fichier GeoJSON',
+        error: err.message,
+      });
+    }
+    const geojsonData = JSON.parse(data);
+
+    // Filtrer les propriétés à renvoyer (par exemple, en supprimant "properties" et en gardant "geometry")
+    const filteredFeatures = geojsonData.features.map(feature => {
+      return {
+        name: feature.properties.name,  
+        coordinates: feature.geometry.coordinates, // Garder la géométrie
+        // Vous pouvez choisir d'inclure uniquement certaines propriétés (par exemple "properties.name")
+        properties: {
+          sym:feature.properties.sym,
+          type:feature.properties.type
+        }
+      };
+    });
+    // Envoyer le contenu du fichier comme JSON
+    res.status(200).json(filteredFeatures);
+  });
 });
 
 module.exports = router;
