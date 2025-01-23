@@ -8,16 +8,20 @@ var logger = require('morgan');
 
 const passport = require('passport');
 require('./config/passport');
+const verifyAndRenewTokens = require('./middlewares/verifyAndRenewTokens');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var yearsRouter = require('./routes/years');
+var positionsRouter = require('./routes/positions');
+var itinerariesRouter = require('./routes/itineraries');
 
 const cors = require('cors');
 
 var app = express();
 
 app.use(cors());
+
+app.use(verifyAndRenewTokens);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -29,6 +33,7 @@ app.use(passport.initialize());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/years', yearsRouter);
+app.use('/positions', positionsRouter);
+app.use('/itineraries', itinerariesRouter);
 
 module.exports = app;
