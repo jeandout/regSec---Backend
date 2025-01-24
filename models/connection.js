@@ -1,4 +1,5 @@
 
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 // Pour récupérer la connection string à l'intérieur du .env
